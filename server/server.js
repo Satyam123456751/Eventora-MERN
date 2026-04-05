@@ -16,6 +16,7 @@ app.use(cors({
     origin: ['https://eventora-mern-6c5l.vercel.app', 'http://localhost:5173'],
     credentials: true
 }));
+app.use(express.json());
 
 // Routes
 app.use('/api/auth', authRoutes);

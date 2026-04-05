@@ -12,8 +12,10 @@ const bookingRoutes = require('./routes/bookings');
 const app = express();
 
 // Middleware
-app.use(cors());
-app.use(express.json());
+app.use(cors({
+    origin: ['https://eventora-mern-6c5l.vercel.app', 'http://localhost:5173'],
+    credentials: true
+}));
 
 // Routes
 app.use('/api/auth', authRoutes);
